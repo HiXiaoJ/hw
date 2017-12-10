@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewprot"  content="width=device-width" initial-scale = 1.0, user-scalable = no/>
+	<title>Document</title>
+	<link rel="stylesheet" href="fonts/base.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<style>
+	body{
+		width: 100%;
+        height: 570px;
+        min-width: 320px;
+        max-width: 640px;
+        background-color: #f0f0f0;
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3)
+	}   
+	 .icon {
+          /* 通过设置 font-size 来改变图标大小 */
+          width: 1em; height: 1em;
+          /* 图标和文字相邻时，垂直对齐 */
+          vertical-align: -0.15em;
+          /* 通过设置 color 来改变 SVG 的颜色/fill */
+          fill: currentColor;
+          /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+          overflow: hidden;
+        }
+
+   .heard{
+        	width: 100%;
+        	height: 52px;
+        	line-height: 52px;
+        	/*border: 1px solid red;*/
+        	text-align: center;
+        	position: relative;
+        	background-color: #fff;
+        }
+    .icon-fanhui {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	font-size: 30px;
+       font-weight: 900;
+    }
+    .goBack{
+	    position: absolute;
+	    top: 0;
+	    left: 35px;
+	    font-size: 20px;
+    }
+    .safety,
+    .mode{
+    	font-size: 20px;
+    	font-weight: 700;
+    }
+    .mode{
+        padding-left: 20px;
+    }
+    .news{
+    	width: 100%;
+    	height: 180px;
+    	/*border: 1px solid red;*/
+    	background-color: #fff;
+    	margin-top: 10px;
+    	margin-bottom: 20px;
+    }
+    .news li{
+
+    	height: 45px;
+    	line-height: 45px;
+    	border-bottom: 1px solid #ccc;
+    }
+    .news li:last-child{
+    	box-shadow: 1px  1px  rgba(0,0,0,.3)
+    }
+    .news li:first-child{
+    	position: relative;
+    }
+    .news input{
+    	font-size: 20px;
+    }
+    .getWord{
+    	font-size: 20px;
+    	position: absolute;
+        top: 10px;
+        right: 30px;
+       
+    }
+    .confirm{
+    	width: 100%;
+    	height: 45px;
+    	line-height: 45px;
+    	text-align: center;
+    	background-color: #FFCF49;
+    	font-size: 20px;
+    	color: #fff;
+    }
+	</style>
+</head>
+<body>
+	<div class="heard"><span class = "iconfont icon-fanhui"></span><span class="goBack">返回</span><span class="safety">帐号与安全</span></div>
+	<div class= "news">
+		<form action="">
+		   <ul>
+			   <li ><span class="mode">手机号：</span><input type="text" placeholder="您的注册手机号"> <a href="javascript:;"><input class="getWord"  type="button" id="btn" value="获取验证码"></a></li>
+			   <li><span class="mode">验证码：</span><input type="text" placeholder="您手机收到的验证码"></li>
+			   <li><span class="mode">新密码：</span><input type="text" placeholder ="6-20位的字母或者数字"></li>
+			   <li><span class="mode">重复密码：</span><input type="text" placeholder ="6-20位的字母或者数字"></li>
+		   </ul>
+		</form>
+	</div>
+    <div class="confirm">确定</div>
+    <script>
+    	
+    var sleep = 30, flag = null;
+
+    window.onload = function ()
+
+    {
+
+        var btn = document.getElementById ('btn');
+
+        btn.onclick = function ()
+
+        {
+
+            if (!flag)
+
+            {
+
+                this.style.backgroundColor = 'rgb(243, 182, 182)';
+
+                this.disabled = "disabled";
+
+                this.style.cursor = "wait";
+
+                this.value = "重新发送 (" + sleep-- + ")";
+
+                flag = setInterval (function ()
+
+                {
+
+                    if (sleep == 0)
+
+                    {
+
+                        if (!!flag)
+
+                        {
+
+                            clearInterval (flag);
+
+                            flag = null;
+
+                            sleep = 30;
+
+                            btn.style.cursor = "pointer";
+
+                            btn.removeAttribute ('disabled');
+
+                            btn.value = "获取验证码";
+
+                            btn.style.backgroundColor = '';
+
+                        }
+
+                        return false;
+
+                    }
+
+                    btn.value = "重新发送 (" + sleep-- + ")";
+
+                }, 1000);
+
+            }
+
+        }
+
+    }
+    </script>
+</body>
+</html>

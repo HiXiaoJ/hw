@@ -1,0 +1,117 @@
+.person1_all{
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+}
+.top {
+    width: 100%;
+    height: 40px;
+    max-width: 640px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.top1 {
+    max-width: 640px;
+    height: 40px;
+    width: 100%;
+    background: #0099ff;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.top1 p {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+}
+.banner1 {
+    width: 100%;
+    margin-top: 40px;
+    max-width: 640px;
+}
+.banner {
+    width: 100%;
+    position: relative;;
+}
+
+.banner .login-b {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.banner .login-a {
+    position: absolute;
+    border-radius: 50%;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.main {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    position: relative;
+}
+.main li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+}
+.main li img{
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+}
+.main li p {
+    position: absolute;
+    left: 46px;
+    top: 18px;
+
+}
+.main li i {
+    position: absolute;
+    right: 2px;
+    top:18px;
+    color: #e6e6e6;
+}
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    background-color: #fff;
+}
+.footer li {
+    width: 33%;
+    height: 45px;
+    float: left;
+
+}
+.footer li i {
+    position: absolute;
+    top:0px;
+    margin-left: 32px;
+    font-size: 20px;
+}
+.footer li span {
+    text-align: center;
+    position: absolute;
+    padding-top: 25px;
+    padding-left: 30px;
+}
+.current {
+    color: #aad3ff !important;
+}

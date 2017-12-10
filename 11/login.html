@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewprot" content="width=device-width" initial-scale = 1.0, user-scalable=no />	
+	<title>Document</title> 
+	<link rel="stylesheet" href="fonts/base.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="font1/iconfont.css">
+	
+	<style>
+	.bigBox{
+		width: 100%;
+		max-width: 640px;
+		min-width: 320px;
+		height: 700px;
+		box-shadow: 2px 2px 12px 5px rgba(0,0,0,.3);
+		margin: 0 auto;
+		position: relative;
+        background-color: #f0f0f0;
+	}
+	.myBox{
+		width: 100%;
+		height: 42px;
+		line-height: 42px;
+        letter-spacing: 5px;
+		text-align: center;
+		font-size: 20px;
+		background-color: #0099FF;
+		color: #fff;
+
+	}
+	.banner{
+        width: 100%;
+        height: 175px;
+        background: url(images/bg.png) no-repeat;
+        position: relative;
+	}
+.person {
+	display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #ccc;
+   }
+
+  .person img { 
+    display: block;   
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+    .login{
+    	position: absolute;
+    	top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%); 
+    }
+    .login a{
+    	font-size: 20px;
+    	color: #fff;
+        letter-spacing: 5px;
+    }
+    .ulBox{
+    	padding-top: 20px;
+        background-color: #fff;
+    }
+    .ulBox li{    	
+    	height: 40px;
+    	line-height: 40px;
+        font-size: 20px;
+        color: #666;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+    .ulBox li a{
+    	padding-left: 70px;
+    }
+
+
+    .icon {
+          /* 通过设置 font-size 来改变图标大小 */
+          width: 1em; height: 1em;
+          /* 图标和文字相邻时，垂直对齐 */
+          vertical-align: -0.15em;
+          /* 通过设置 color 来改变 SVG 的颜色/fill */
+          fill: currentColor;
+          /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+          overflow: hidden;
+        }
+        .icon-wujiaoxing,
+        .icon-guanyuwomen{
+        	font-size: 25px;
+        	color: #7BE0FA;
+        	position: absolute;
+        	top: 0;
+        	left: 20px;
+        }
+        .icon-shezhi{
+        	font-size: 25px;
+        	color: #DA7CE2;
+        	position: absolute;
+        	top: 0;
+        	left: 20px;
+        }
+        .icon-zhankai-copy{
+        	font-size: 25px;
+        	color: #DFDFDF;
+        	position: absolute;
+        	top: 0;
+        	right: 20px;
+        }
+
+        .floot{
+        	width: 100%;
+        	height: 60px;
+        	position: absolute;
+        	bottom: 10px;
+        	left: 0;
+            border-top: 1px solid #ccc;
+        }
+        .floot li{
+		    display: inline-block;
+		    width: 32%;
+		    text-align: center;
+        }
+        .floot li span{
+        	display: block;
+        	
+        	font-size: 17px;
+        }
+       .floot .icon-shouye,
+       .floot .icon-shangjia,
+       .floot .icon-wode {
+        	font-size: 30px;
+        }
+        .floot li a:hover span{
+        	color: #7FCCFF;
+        }
+	
+	</style>
+</head>
+<body>
+	<div class="bigBox">
+		<div class="myBox">我的</div>
+		<div class="banner">
+			<a href="javascript:;" class="person">
+				<img src="images/person.png" alt="">
+			</a>
+			<div class= "login">
+			   <a href="javascript:;">点击登录</a>
+			</div>			
+		</div>
+		<div class = "ulBox">
+		   <ul>
+				<li><span class="iconfont icon-wujiaoxing"></span><a href="javascript:;">我的收藏</a><span class="iconfont icon-zhankai-copy"></span></li>
+				<li><span class="iconfont icon-shezhi"></span><a href="javascript:;">通用设置</a><span class="iconfont icon-zhankai-copy"></span></li>
+				<li><span class="iconfont icon-guanyuwomen"></span><a href="javascript:;">关于我们</a><span class="iconfont icon-zhankai-copy"></span></li>
+		   </ul>
+		</div>	
+		<div class="floot">
+			<ul>	
+				<li><a href="javascript:;"><span class="iconfont icon-shouye"></span><span>首页</span></a></li>
+				<li><a href="javascript:;"><span class="iconfont icon-shangjia"></span><span>商家</span></a></li>
+				<li><a href="javascript:;"><span class="iconfont icon-wode"></span><span>我的</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="fonts/iconfont.js"></script>
+</body>
+</html>
